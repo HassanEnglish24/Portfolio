@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hassan</title>
+  
+  
+  
+  
+  <style>
+    
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+      background: ;
+      font-family: sans-serif;
+    }
+    
+    header{
+      background: white ;
+      min-height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+      
+      flex-direction: column;
+
+      padding: 5px;
+      box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.07);
+    }
+    
+    header .logo h1{
+      font-size: 28px;
+      
+      
+    }
+    
+    .logo h1 span{
+      color: green;
+      padding-left: 10px;
+    }
+    
+    
+    header .nav {
+      
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0px;
+      width: 100%;
+
+    }
+    
+    .nav ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column ;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .nav ul li, a{
+      list-style: none;
+      text-decoration: none;
+      font-weight: bold;
+      color: green;
+    }
+    
+    .nav-up{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      
+    }
+    
+    .nav-btn{
+      background: black;
+      height: 5px;
+      width: 34px;
+      position: relative;
+      top: 6px;
+      right: 10px;
+    }
+    
+    .nav-btn:before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 5px;
+      background: black;
+      top: 10px;
+      right: 0px
+      }
+    
+     .nav-btn:after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 5px;
+      background: black;
+      top: 20px;
+      right: 0px
+      
+      }
+    
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column ;
+      }
+      
+      .hero .left{
+        width: 100%;
+        padding: 130px 20px 50px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+      }
+     
+     
+      .left h3{
+        font-size: 20px;
+        color: green;
+        
+      }
+      .left h1{
+        font-size: 40px;
+      }
+    
+      .hero .right  {
+        width: 100%;
+        background: ;
+        padding: 30px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .right img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.30) 
+        
+      }
+    
+      .cta button{
+        font-size: 13.5px;
+        font-weight: 300;
+        color: white;
+        background: green;
+        padding: 5px 10px;
+       font-weight: bold;
+       margin-top: 20px;
+       border-radius: 3px;
+       border: none;
+       box-shadow: 3px 4px 15px rgb(0,128,1, 0.20) 
+        
+      }
+      
+      
+      .about{
+        padding: 10px;
+        text-align: center ;
+      }
+      
+      .about h1{
+        font-size: 26px ;
+        color: green;
+      }
+      
+      .about p{
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      .about button{
+        background: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+      }
+      
+      
+      
+    
+  </style>
+  
+  
+  
+  
+  
+</head>
+<body>
+  
+
+  
+  
+  
+  <header>
+    <div class="nav-up">
+      <div class="logo">
+        <h1><span>H</span>assan</h1>
+      </div>
+    
+  
+    
+    
+      <div class="nav-btn" id="toggleButton"></div>
+    </div>
+    
+    
+    <div class="nav" id="box">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="lessons.html">LESSONS</a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">CONTACT ME</a></li>
+      </ul>
+    </div>
+
+  </header>
+  
+  
+  
+  
+  
+  
+  
+  <div class="hero">
+    
+    <div class="left">
+      
+      <h3>Hello 👋</h3>
+      <h1>I'm Hassan</h1>
+      <p>Web designer</p>
+      <div class="cta"><button>Contact me</button></div>
+    
+    </div>
+    
+    <div class="right">
+      <img src="heroimg.jpg" alt="">
+    </div>
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="about">
+    <h1>know more about me</h1>
+    <p>
+      
+
+
+
+
+I am a first-year university student passionate about the English language. Despite my academic commitments, I have dedicated significant effort to mastering English, gaining a deep understanding of the challenges students face. My journey has been one of determination and resilience, enabling me to connect with students empathetically and provide practical learning strategies.
+
+I also had the opportunity to assist an English teacher at Kabridahar University, gaining valuable insights into effective teaching methods and classroom management. This experience has prepared me to teach modern English, including contemporary language use and digital communication skills.
+
+I am enthusiastic about learning and developing my skills further as an educator. I am patient, understanding, and committed to creating a supportive and motivating learning environment. My goal is to inspire a love for the English language in each student and help them achieve their full potential.
+
+
+    </p>
+    
+    <button>Get in touch</button>
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+    
+       document.getElementById("toggleButton").onclick = function() {
+         var box = document.getElementById("box");
+         if (box.style.display === "none") {
+           box.style.display = "block";
+         } else {
+           box.style.display = "none";
+         }
+       }; 
+    
+    
+  </script>
+  
+</body>
+</html>

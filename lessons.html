@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lessons</title>
+</head>
+
+
+<style>
+  
+      *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+      background: ;
+      font-family: sans-serif;
+    }
+    
+    header{
+      background: white ;
+      min-height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+      
+      flex-direction: column;
+
+      padding: 5px;
+      box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.07);
+    }
+    
+    header .logo h1{
+      font-size: 28px;
+      
+      
+    }
+    
+    .logo h1 span{
+      color: green;
+      padding-left: 10px;
+    }
+    
+    
+    header .nav {
+      
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0px;
+      width: 100%;
+
+    }
+    
+    .nav ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column ;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .nav ul li, a{
+      list-style: none;
+      text-decoration: none;
+      font-weight: bold;
+      color: green;
+    }
+    
+    .nav-up{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      
+    }
+    
+    .nav-btn{
+      background: black;
+      height: 5px;
+      width: 34px;
+      position: relative;
+      top: 6px;
+      right: 10px;
+    }
+    
+    .nav-btn:before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 5px;
+      background: black;
+      top: 10px;
+      right: 0px
+      }
+    
+     .nav-btn:after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 5px;
+      background: black;
+      top: 20px;
+      right: 0px
+      
+      }
+      
+      .cover{
+        width: 100%;
+        padding: 30px 10px;
+        background: green;
+        color: white;
+        text-align: center ;
+      }
+      
+      .cover p{
+        padding-top: 20px;
+      }
+      
+      .video{
+        width: 90%;
+        height: auto; 
+      }
+      
+      
+  
+</style>
+
+
+
+<body>
+  
+  
+  
+    <header>
+    <div class="nav-up">
+      <div class="logo">
+        <h1><span>H</span>assan</h1>
+      </div>
+    
+  
+    
+    
+      <div class="nav-btn" id="toggleButton"></div>
+    </div>
+    
+    
+    <div class="nav" id="box">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">CONTACT ME</a></li>
+      </ul>
+    </div>
+
+  </header>
+  
+  
+  
+  
+  <div class="cover">
+    
+      
+  <h1>Lessons</h1>
+  <p>
+    
+  In this section, you can watch English videos explained by me."
+  </p>
+</div>
+    
+    <div class="video">
+      
+       
+ <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="400" height="360" frameborder="0"    allowfullscreen></iframe>
+      
+      
+      
+
+    
+    
+    
+    
+  </div>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <script>
+    
+       document.getElementById("toggleButton").onclick = function() {
+         var box = document.getElementById("box");
+         if (box.style.display === "none") {
+           box.style.display = "block";
+         } else {
+           box.style.display = "none";
+         }
+       }; 
+    
+    
+  </script>
+  
+  
+  
+</body>
+</html>
