@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,210 +10,635 @@
 
 
 <style>
-  
-      *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    
-    body{
-      background: ;
-      font-family: sans-serif;
-    }
-    
-    header{
-      background: white ;
-      min-height: 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-     
-      
-      flex-direction: column;
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-      padding: 5px;
-      box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.07);
-    }
+  body {
+    background: rgb(0, 0, 0, 0.05);
+    font-family: sans-serif;
+  }
+
+  header {
+    background: white;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    flex-direction: column;
+
+    padding: 5px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.07);
+  }
+
+  header .logo h1 {
+    font-size: 28px;
+
+
+  }
+
+  .logo h1 span {
+    color: green;
+    padding-left: 10px;
+  }
+
+
+  header .nav {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    width: 100%;
+
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .nav ul li,
+  a {
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+  }
+
+  .nav-up {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+  }
+
+  .nav-btn {
+    background: black;
+    height: 5px;
+    width: 34px;
+    position: relative;
+    top: 6px;
+    right: 10px;
+  }
+
+  .nav-btn:before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: black;
+    top: 10px;
+    right: 0px
+  }
+
+  .nav-btn:after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: black;
+    top: 20px;
+    right: 0px
+  }
+
+  .cover {
+    width: 100%;
+    padding: 30px 10px;
+    background: green;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover:before {
+    content: '';
+    position: absolute;
+    background: #00AC00;
+    height: 100%;
+    width: 100%;
+
+    right: 0px;
+    top: 0px;
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 38% 100%);
+    box-shadow: 0px 30px 10px black;
+  }
+
+  .cover .text {
+    background: ;
+    position: relative;
+  }
+
+  .cover .text p {
+    padding-top: 20px;
+
+  }
+
+
+
+
+
+  .button-container {
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    background: ;
+    width: 100%;
+    background:;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(225, 225, 225, 0.40);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0px;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.10);
+  }
+
+  .button-container button {
+    padding: 7px 3px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    border: none;
+
+    font-weight: bold;
+  }
+
+  .button-container button.active {
+    color: green;
+
+    border-bottom: 5px solid green;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+
+
+  .scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
     
-    header .logo h1{
-      font-size: 28px;
-      
-      
-    }
     
-    .logo h1 span{
-      color: green;
-      padding-left: 10px;
-    }
+  }
+
+  .box {
+    
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    flex-direction: column;
+    margin-right: 10px;
+    scroll-snap-stop: always;
+  }
+
+  .box:last-child {
+    margin-right: 0;
+  }
+
+  .forkids-intro {
+    width: 95%;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.10);
+    background: linear-gradient(-45deg, pink, deeppink);
+    padding: 30px 15px;
+    border-radius: 10px;
+
+  }
+
+  .forkids-intro h1 {
+    font-size: 25px;
+  }
+
+  .forkids-intro p {
+    font-size: 16px;
+    padding: 10px 0px;
+  }
+
+  .forkids-intro button {
+    background: green;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+  }
+  
+  .video-container {
+    width: 100%;
+    height: auto ;
+    padding: 30px 0px ;
+    gap: 10px ;
+    display: flex;
+    flex-wrap: wrap ;
+    
+  }
+  
+  .video-container iframe{
+    width: 390px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border: 1.5px solid black;
     
     
-    header .nav {
-      
-      display: none;
+    
+  }
+  .video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    
+    
+  }
+  .video .title{
+    font-size: 16px ;
+    color: black;
+    
+    height: 100px ;
+    font-weight: bold ;
+    padding: 10px 12px ;
+  }
+  
+  
+  @media (min-width: 901px) { 
+    .video-container {
+      display: flex;
       justify-content: center;
       align-items: center;
-      padding: 40px 0px;
-      width: 100%;
-
+      gap: 20px ;
     }
     
-    .nav ul{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column ;
-      flex-wrap: wrap;
-      gap: 30px;
+    .video{
+      width: 30%;
     }
-    
-    .nav ul li, a{
-      list-style: none;
-      text-decoration: none;
-      font-weight: bold;
-      color: green;
-    }
-    
-    .nav-up{
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      
-    }
-    
-    .nav-btn{
-      background: black;
-      height: 5px;
-      width: 34px;
-      position: relative;
-      top: 6px;
-      right: 10px;
-    }
-    
-    .nav-btn:before {
-      position: absolute;
-      content: '';
-      width: 30px;
-      height: 5px;
-      background: black;
-      top: 10px;
-      right: 0px
+      .video-container iframe {
+        width: 300px;
+        height: 170px;
       }
     
-     .nav-btn:after {
-      position: absolute;
-      content: '';
-      width: 30px;
-      height: 5px;
-      background: black;
-      top: 20px;
-      right: 0px
-      
-      }
-      
-      .cover{
-        width: 100%;
-        padding: 30px 10px;
-        background: green;
-        color: white;
-        text-align: center ;
-      }
-      
-      .cover p{
-        padding-top: 20px;
-      }
-      
-      .video{
-        width: 90%;
-        height: auto; 
-      }
-      
-      
+  }
+  
+  
   
 </style>
 
 
 
 <body>
-  
-  
-  
-    <header>
+
+
+
+  <header>
     <div class="nav-up">
       <div class="logo">
         <h1><span>H</span>assan</h1>
       </div>
-    
-  
-    
-    
+
+
+
+
       <div class="nav-btn" id="toggleButton"></div>
     </div>
-    
-    
+
+
     <div class="nav" id="box">
       <ul>
         <li><a href="index.html">HOME</a></li>
-        
+
         <li><a href="#">PROJECTS</a></li>
         <li><a href="#">CONTACT ME</a></li>
       </ul>
     </div>
 
   </header>
-  
-  
-  
-  
+
+
+
+
   <div class="cover">
-    
-      
-  <h1>Lessons</h1>
-  <p>
-    
-  In this section, you can watch English videos explained by me."
-  </p>
-</div>
-    
-    <div class="video">
-      
-       
- <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="400" height="360" frameborder="0"    allowfullscreen></iframe>
-      
-      
-      
 
-    
-    
-    
-    
+    <div class="text">
+      <h1>Lessons</h1>
+      <p>
+
+        In this section, you can watch English videos explained by me."
+      </p>
+    </div>
   </div>
-  
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <script>
+
+
+
+
+
+  <div class="button-container">
+    <button onclick="scrollToBox(0)" id="btn0">For kids</button>
+    <button onclick="scrollToBox(1)" id="btn1">E-books</button>
+    <button onclick="scrollToBox(2)" id="btn2">Grammar</button>
+    <button onclick="scrollToBox(3)" id="btn3">more+</button>
+  </div>
+  <div class="scroll-container" id="scrollContainer" onscroll="updateButtonState()">
+    <div class="box">
+      <div class="forkids-intro">
+        <h1>Lorem ipsum dolor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque voluptates illo sit.</p>
+        <button>Try Now</button>
+      </div>
+
+
+          <div class="video-container">
+            
+            
+            <div class="video">
+            
+            <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
+            
+            <p class="title">
+              background is a break in the skin or the mucus membrane of the body
+            </p>
+
+            </div>
+            
+
+            
+      <div class="video">
+                    
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
+        <p class="title">
+          padding is a break in the skin or the mucus membrane of the body 
+        </p>
+
+      </div>
+
+
+      <div class="video">
+        
+            <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
+                    <p class="title">
+                      English is a break in the skin or the mucus membrane 
+                    </p>
+          </div>
+          
+          
+          
+  </div>
+
+
+
+
+
+
+    </div>
+    <div class="box">
+             
+             
+             
+                       <div class="video-container">
+             
+             
+                         <div class="video">
+             
+                           <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
+             
+                           <p class="title">
+                             background is a break in the skin or the mucus membrane of the body
+                           </p>
+             
+                         </div>
+             
+             
+             
+                         <div class="video">
+             
+                           <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+             
+                           <p class="title">
+                             padding is a break in the skin or the mucus membrane of the body
+                           </p>
+             
+                         </div>
+             
+             
+                         <div class="video">
+             
+                           <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
+                           <p class="title">
+                             English is a break in the skin or the mucus membrane
+                           </p>
+                         </div>
+             
+             
+             
+                       </div>
+             
+             
+    </div>
     
-       document.getElementById("toggleButton").onclick = function() {
-         var box = document.getElementById("box");
-         if (box.style.display === "none") {
-           box.style.display = "block";
-         } else {
-           box.style.display = "none";
-         }
-       }; 
     
     
+    
+    
+    
+    <div class="box">          <div class="video-container">
+    
+    
+                <div class="video">
+    
+                  <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
+    
+                  <p class="title">
+                    background is a break in the skin or the mucus membrane of the body
+                  </p>
+    
+                </div>
+    
+    
+    
+                <div class="video">
+    
+                  <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+    
+                  <p class="title">
+                    padding is a break in the skin or the mucus membrane of the body
+                  </p>
+    
+                </div>
+    
+    
+                <div class="video">
+    
+                  <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
+                  <p class="title">
+                    English is a break in the skin or the mucus membrane
+                  </p>
+                </div>
+    
+    
+    
+              </div></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="box">          <div class="video-container">
+    
+    
+                <div class="video">
+    
+                  <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
+    
+                  <p class="title">
+                    background is a break in the skin or the mucus membrane of the body
+                  </p>
+    
+                </div>
+    
+    
+    
+                <div class="video">
+    
+                  <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+    
+                  <p class="title">
+                    padding is a break in the skin or the mucus membrane of the body
+                  </p>
+    
+                </div>
+    
+    
+                <div class="video">
+    
+                  <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
+                  <p class="title">
+                    English is a break in the skin or the mucus membrane
+                  </p>
+                </div>
+    
+    
+    
+              </div></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--
+      
+      <iframe src="https://vimeo.com/127789307" width="400" height="360" frameborder="1"></iframe>
+      -->
+
+
+
+
+
+
+
+
+
+
+  <script>
+    document.getElementById("toggleButton").onclick = function() {
+      var box = document.getElementById("box");
+      if (box.style.display === "none") {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    };
+
+
+
+    function filterBoxes(category) {
+      const boxes = document.querySelectorAll('.box');
+      boxes.forEach(box => {
+        if (box.classList.contains(category)) {
+
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+
+
+      const buttons = document.querySelectorAll('.buttons button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    }
+
+
+
+
+
+    // tabs
+
+
+
+    function scrollToBox(index) {
+      const container = document.getElementById('scrollContainer');
+      const boxWidth = container.children[index].offsetWidth;
+      container.scrollTo({
+        left: boxWidth * index,
+        behavior: 'smooth'
+      });
+      updateButtonState(index);
+    }
+
+    function updateButtonState(index = null) {
+      const container = document.getElementById('scrollContainer');
+      const boxes = container.children;
+      const buttons = document.querySelectorAll('.button-container button');
+
+      if (index !== null) {
+        buttons.forEach(button => button.classList.remove('active'));
+        buttons[index].classList.add('active');
+      } else {
+        const scrollLeft = container.scrollLeft;
+        const boxWidth = boxes[0].offsetWidth;
+        const currentIndex = Math.round(scrollLeft / boxWidth);
+
+        buttons.forEach(button => button.classList.remove('active'));
+        buttons[currentIndex].classList.add('active');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateButtonState(0);
+    });
   </script>
-  
-  
-  
+
+
+
 </body>
-</html>
+
+      </html>
