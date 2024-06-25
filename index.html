@@ -194,9 +194,75 @@
         border-radius: 5px;
       }
       
+      .protect{
+        width: 100vw;
+        height: 100vh; 
+        position: fixed;
+        top: 0px ;
+        left: 0px;
+        background: rgb(0,128,1, 0.20);
+        backdrop-filter: blur(50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       
       
+      .box {
+        width: 340px;
+        height: auto ;
+        background: white;
+        padding: 30px 20px ;
+        border-radius: 5px ; 
+        
+      }
+      
+      .box h1{
+        font-size: 16px ;
+        padding-bottom: 15px ;
+      }
+      
+      .box input{
+        width: 100%;
+        height: 35px ;
+        padding: 10px ;
+        border: 2px solid green ;
+        border-radius: 4px ; 
+        color: green ;
+        outline: none ;
+      }
+      
+      .box button{
+        background: green;
+        padding: 10px 20px ;
+        border: none ;
+        border-radius: 3px ; 
+        color: white ;
+        font-weight: bold ;
+      }
+      
+      .hidden {
+        display: none;
+      }
     
+    
+      .hoos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 70px ;
+        
+        
+      }
+      
+      .hoos a{
+        font-size: 16px ;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+      
+      
   </style>
   
   
@@ -296,6 +362,29 @@ I am enthusiastic about learning and developing my skills further as an educator
   
   
   
+      <div class="protect" id="box2">
+
+        <div class="box">
+          
+          <h1>Enter The code</h1>
+          
+                  <input type="text" id="inputText" placeholder="Enter text">
+                  
+                  <div class="hoos">
+             <button id="submitButton">Submit</button>
+            
+            <p><a href="lessons.html">view lessons page</a></p>
+                    
+                  </div>
+
+        </div>
+    </div>
+  
+  
+  
+  
+  
+  
   
   <script>
     
@@ -309,7 +398,26 @@ I am enthusiastic about learning and developing my skills further as an educator
        }; 
     
     
+    
+    
+    
+    document.getElementById('submitButton').addEventListener('click', function() {
+      const userInput = document.getElementById('inputText').value;
+      const box = document.getElementById('box2');
+    
+      if (userInput === '#1234') {
+        box.classList.add('hidden');
+      } else {
+        alert('It\'s wrong');
+      }
+    });
+    
+    
+    
+    
+    
+    
   </script>
   
 </body>
-</html>
+      </html>
