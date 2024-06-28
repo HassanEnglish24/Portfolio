@@ -152,7 +152,7 @@
     padding: 10px 10px;
     background: ;
     width: 100%;
-    background:;
+    background: ;
     display: flex;
     justify-content: space-between;
     background: rgb(225, 225, 225, 0.40);
@@ -188,12 +188,12 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     width: 100%;
-    
-    
+
+
   }
 
   .box {
-    
+
     flex: 0 0 100%;
     scroll-snap-align: start;
     display: flex;
@@ -213,7 +213,7 @@
   .forkids-intro {
     width: 95%;
     box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.10);
-    background: linear-gradient(-45deg, pink, deeppink);
+    background: linear-gradient(-45deg, brown, deeppink);
     padding: 30px 15px;
     border-radius: 10px;
 
@@ -229,73 +229,126 @@
   }
 
   .forkids-intro button {
-    background: green;
+    background: rgb(225, 225, 225, 0.20);
     padding: 10px 20px;
-    border: none;
+    border: 1px solid rgb(225, 225, 225, 0.40);
     color: white;
     border-radius: 3px;
   }
-  
+
   .video-container {
     width: 100%;
-    height: auto ;
-    padding: 30px 0px ;
-    gap: 10px ;
+    height: auto;
+    padding: 30px 0px;
+    gap: 10px;
     display: flex;
-    flex-wrap: wrap ;
-    
+    flex-wrap: wrap;
+
   }
-  
-  .video-container iframe{
+
+  .video-container iframe {
     width: 390px;
     height: 220px;
     display: flex;
     justify-content: center;
     align-items: start;
     border: 1.5px solid black;
-    
-    
-    
+
+
+
   }
+
   .video {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column ;
-    
-    
+    flex-direction: column;
+
+
   }
-  .video .title{
-    font-size: 16px ;
+
+  .video .title {
+    font-size: 16px;
     color: black;
-    
-    height: 100px ;
-    font-weight: bold ;
-    padding: 10px 12px ;
+
+    height: 100px;
+    font-weight: bold;
+    padding: 10px 12px;
   }
-  
-  
-  @media (min-width: 901px) { 
+
+
+  @media (min-width: 901px) {
     .video-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px ;
+      gap: 20px;
     }
-    
-    .video{
+
+    .video {
       width: 30%;
     }
-      .video-container iframe {
-        width: 300px;
-        height: 170px;
-      }
-    
+
+    .video-container iframe {
+      width: 300px;
+      height: 170px;
+    }
+
   }
-  
-  
-  
+
+  .box .book {
+    width: 175px;
+    background: white;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.10);
+  }
+
+  .book-img {
+    width: 100%;
+    height: 200px;
+    background: green;
+  }
+
+  .book-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .book-title {
+    width: 100%;
+    height: 30%;
+
+    padding: 10px 2px;
+  }
+
+  .book-title h1 {
+    font-size: 16px;
+    color: black;
+  }
+
+  .book-title p {
+    font-size: 13px;
+    color: black;
+
+    padding-top: 3px;
+  }
+
+  .book-body {
+    background: rgb(0, 0, 0, 0.01);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+  }
 </style>
 
 
@@ -348,29 +401,38 @@
 
 
   <div class="button-container">
-    <button onclick="scrollToBox(0)" id="btn0">For kids</button>
-    <button onclick="scrollToBox(1)" id="btn1">E-books</button>
-    <button onclick="scrollToBox(2)" id="btn2">Grammar</button>
+    <button onclick="scrollToBox(0)" id="btn0">English</button>
+    <button onclick="scrollToBox(1)" id="btn1">Books</button>
+    <button onclick="scrollToBox(2)" id="btn2">Tech</button>
     <button onclick="scrollToBox(3)" id="btn3">more+</button>
   </div>
   <div class="scroll-container" id="scrollContainer" onscroll="updateButtonState()">
     <div class="box">
       <div class="forkids-intro">
-        <h1>Lorem ipsum dolor</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque voluptates illo sit.</p>
+        <h1>Launching Soon: Comprehensive English Tense Course</h1>
+        <p>We’re excited to announce our upcoming Comprehensive English Tense Course! While the content is complete, we are currently in the final stages of the deploying process and setting up video hosting. We appreciate your patience and understanding.We apologize for any inconvenience and look forward to providing you with a high-quality learning experience soon.</p>
         <button>Try Now</button>
       </div>
 
 
-          <div class="video-container">
-            
-            
+      <form action="https://formspree.io/f/mzzpplqj" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+
+
+
+      <div class="video-container">
+
+        <!--      
             <div class="video">
             
             <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
             
             <p class="title">
-              Testing if the video is working Title is here
+              background is a break in the skin or the mucus membrane of the body
             </p>
 
             </div>
@@ -382,7 +444,7 @@
         <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
         <p class="title">
-          Testing if the video is working Title is here
+          padding is a break in the skin or the mucus membrane of the body 
         </p>
 
       </div>
@@ -392,156 +454,219 @@
         
             <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
                     <p class="title">
-                      Testing if the video is working Title is here
+                      English is a break in the skin or the mucus membrane 
                     </p>
           </div>
           
-          
-          
-  </div>
+       -->
 
-
-
-
+      </div>
 
 
     </div>
+
+
+
+
     <div class="box">
-             
-             
-             
-                       <div class="video-container">
-             
-             
-                         <div class="video">
-             
-                           <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
-             
-                           <p class="title">
-                             background is a break in the skin or the mucus membrane of the body
-                           </p>
-             
-                         </div>
-             
-             
-             
-                         <div class="video">
-             
-                           <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-             
-                           <p class="title">
-                             padding is a break in the skin or the mucus membrane of the body
-                           </p>
-             
-                         </div>
-             
-             
-                         <div class="video">
-             
-                           <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
-                           <p class="title">
-                             English is a break in the skin or the mucus membrane
-                           </p>
-                         </div>
-             
-             
-             
-                       </div>
-             
-             
+
+      <div class="book-body">
+
+
+        <div class="book">
+          <div class="book-img">
+            <img src="con.jpg" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <div class="book-img">
+            <img src="ww.jpg" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+
+
+        <div class="book">
+          <div class="book-img">
+            <img src="cea.jpg" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+
+        <div class="book">
+          <div class="book-img">
+            <img src="ir.jpg" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+
+
+        <div class="book">
+          <div class="book-img">
+            <img src="mv.jpg" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+        <div class="book">
+          <div class="book-img">
+            <img src="rs.jpg" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+
+
+        <div class="book">
+          <div class="book-img">
+            <img src="" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+
+        <div class="book">
+          <div class="book-img">
+            <img src="" alt="">
+          </div>
+          <div class="book-title">
+            <h1>book title appears here</h1>
+            <p>2922</p>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
     </div>
-    
-    
-    
-    
-    
-    
-    <div class="box">          <div class="video-container">
-    
-    
-                <div class="video">
-    
-                  <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
-    
-                  <p class="title">
-                    background is a break in the skin or the mucus membrane of the body
-                  </p>
-    
-                </div>
-    
-    
-    
-                <div class="video">
-    
-                  <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-    
-                  <p class="title">
-                    padding is a break in the skin or the mucus membrane of the body
-                  </p>
-    
-                </div>
-    
-    
-                <div class="video">
-    
-                  <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
-                  <p class="title">
-                    English is a break in the skin or the mucus membrane
-                  </p>
-                </div>
-    
-    
-    
-              </div></div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="box">          <div class="video-container">
-    
-    
-                <div class="video">
-    
-                  <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
-    
-                  <p class="title">
-                    background is a break in the skin or the mucus membrane of the body
-                  </p>
-    
-                </div>
-    
-    
-    
-                <div class="video">
-    
-                  <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-    
-                  <p class="title">
-                    padding is a break in the skin or the mucus membrane of the body
-                  </p>
-    
-                </div>
-    
-    
-                <div class="video">
-    
-                  <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
-                  <p class="title">
-                    English is a break in the skin or the mucus membrane
-                  </p>
-                </div>
-    
-    
-    
-              </div></div>
+
+
+
+
+
+
+    <div class="box">
+      <div class="video-container">
+
+
+        <div class="video">
+
+          <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
+
+          <p class="title">
+            background is a break in the skin or the mucus membrane of the body
+          </p>
+
+        </div>
+
+
+
+        <div class="video">
+
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+          <p class="title">
+            padding is a break in the skin or the mucus membrane of the body
+          </p>
+
+        </div>
+
+
+        <div class="video">
+
+          <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
+          <p class="title">
+            English is a break in the skin or the mucus membrane
+          </p>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="box">
+      <div class="video-container">
+
+
+        <div class="video">
+
+          <iframe src="https://player.vimeo.com/video/76979871" width="400" height="360" frameborder="1" id="video1" allow="autoplay; fullscreen"></iframe>
+
+          <p class="title">
+            background is a break in the skin or the mucus membrane of the body
+          </p>
+
+        </div>
+
+
+
+        <div class="video">
+
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/964082936?h=7ada28162e" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+          <p class="title">
+            padding is a break in the skin or the mucus membrane of the body
+          </p>
+
+        </div>
+
+
+        <div class="video">
+
+          <iframe src="https://player.vimeo.com/video/146022717" id="video3" allow="autoplay; fullscreen"></iframe>
+          <p class="title">
+            English is a break in the skin or the mucus membrane
+          </p>
+        </div>
+
+
+
+      </div>
+    </div>
   </div>
 
 
@@ -641,4 +766,4 @@
 
 </body>
 
-      </html>
+</html>
